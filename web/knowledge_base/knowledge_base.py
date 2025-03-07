@@ -220,9 +220,9 @@ def knowledge_base_page(api: ApiRequest):
                 ]
             ]
             doc_details["in_folder"] = (
-                doc_details["in_folder"].replace(True, "✓").replace(False, "×")
+                doc_details["in_folder"].replace(True, "✓").replace(False, "×"))
             doc_details["in_db"] = (
-                doc_details["in_db"].replace(True, "✓").replace(False, "×")
+                doc_details["in_db"].replace(True, "✓").replace(False, "×"))
             gb = config_aggrid(
                 doc_details,
                 {

@@ -10,6 +10,10 @@ from config.config import Configs
 
 db_url = f"mysql+pymysql://{Configs.db_config.mysql['user']}:{Configs.db_config.mysql['password']}@{Configs.db_config.mysql['host']}:{Configs.db_config.mysql['port']}/{Configs.db_config.mysql['database']}"
 
+
+print(f"database name: {Configs.db_config.mysql['database']}")
+print(f"database user: {Configs.db_config.mysql['user']}")
+print(f"database user password: {Configs.db_config.mysql['password']}")
 engine = create_engine(db_url)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -1,0 +1,19 @@
+log_verbose: true
+enable_rag: false
+mode: auto
+KB_ROOT_PATH: /home/songhau/Documents/VulnBot/data/knowledge_base
+http_default_timeout: 300
+kali:
+  hostname: 10.10.0.5
+  port: 22
+  username: root
+  password: root
+default_bind_host: 0.0.0.0
+api_server:
+  host: 0.0.0.0
+  port: 7861
+  public_host: 127.0.0.1
+  public_port: 7861
+webui_server:
+  host: 0.0.0.0
+  port: 8501

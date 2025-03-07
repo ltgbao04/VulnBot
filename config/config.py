@@ -66,9 +66,9 @@ class DBConfig(BaseFileSettings):
     mysql: dict = {
         "host": "",
         "port": 3306,
-        "user": "",
-        "password": "",
-        "database": ""
+        "user": "admin",
+        "password": "mypassword",
+        "database": "vulnbot"
     }
 
 
