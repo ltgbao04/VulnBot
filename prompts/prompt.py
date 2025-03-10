@@ -13,7 +13,13 @@ class DeepPentestPrompt:
         2. Always include the target machine IP or port in the instructions.
         3. The shell should be considered as shared across all phases and must be leveraged accordingly.
     The plan should consist of 1 to 5 tasks, using as few tasks as possible.
-    ## Example:
+
+    ### **Strict Formatting Instructions**: 
+    - **You must wrap the ouput in '<json></json>' tags.**
+    - **Do not use triple backticks (' '''json '), plaintext JSON, or any other format.**
+    - **If the output is not inside '<json></json>', it will be considered incorrect.**
+
+    ## Example (Follow This Exact Structure):
     Output a list of JSON objects, formatted as shown below and wrapped in <json></json> tags:
     <json>
     [
