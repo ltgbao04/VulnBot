@@ -82,6 +82,7 @@ class Role(BaseModel):
         return self.planner.plan()
 
     def run(self, session):
+        print(f"***********Current role: {self.name}***********")
         next_task = self._plan(session)
         while self.chat_counter < self.max_interactions:
             next_task = self._react(next_task)

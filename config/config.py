@@ -41,10 +41,10 @@ class BasicConfig(BaseFileSettings):
     http_default_timeout: int = 300
 
     kali: dict = {
-        "hostname": "10.10.0.5",
+        "hostname": "10.102.197.150",
         "port": 22,
         "username": "root",
-        "password": "root",
+        "password": "kali",
     }
 
     default_bind_host: str = "0.0.0.0" if sys.platform != "win32" else "127.0.0.1"
@@ -66,9 +66,9 @@ class DBConfig(BaseFileSettings):
     mysql: dict = {
         "host": "",
         "port": 3306,
-        "user": "",
-        "password": "",
-        "database": ""
+        "user": "admin",
+        "password": "mypassword",
+        "database": "vulnbot"
     }
 
 
@@ -125,13 +125,13 @@ class LLMConfig(BaseFileSettings):
     api_key: str = "http://127.0.0.1:11434"
     llm_model: str = "ollama"
     base_url: str = ""
-    llm_model_name: str = "deepseek-r1:1.5b"
+    llm_model_name: str = "deepseek-r1:1.5b_20cpu"
     embedding_models: str = "maidalun1020/bce-embedding-base_v1"
     embedding_type: str = "local"
     context_length: int = 120000
     embedding_url: str = ""
     rerank_model: str = "maidalun1020/bce-reranker-base_v1"
-    temperature: float = 0.5
+    temperature: float = 0.1
     history_len: int = 5
     timeout: int = 600
     proxies: Dict[str, str] = dataclasses.field(default_factory=dict)
