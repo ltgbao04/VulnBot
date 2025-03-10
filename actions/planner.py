@@ -22,7 +22,7 @@ class Planner(BaseModel):
             next_task = self.next_task_details()
             return next_task
 
-        response = WritePlan(plan_chat_id=self.current_plan.plan_chat_id).run(init_description)
+        response = WritePlan(plan_chat_id=self.current_plan.plan_chat_id).run(self.init_description)
 
         logger.info(f"plan: {response}")
 

@@ -37,13 +37,18 @@ class WritePlan(BaseModel):
         if rsp == "":
             return rsp
 
-        match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
+        #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*''')"
+        #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
+        pattern = r"(?:<json>\s*([\s\S]*?)\s*</json>|```json\s*([\s\S]*?)\s*```)"
+        match = re.search(pattern, rsp, re.DOTALL)
+        # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
         if match:
             code = match.group(1)
             return code
 
 
 def parse_tasks(response: str, current_plan: Plan):
+    print(f"#######response: {response}#######")
     response = json.loads(response)
 
     tasks = import_tasks_from_json(current_plan.id, response)

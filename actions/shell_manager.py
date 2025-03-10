@@ -28,6 +28,8 @@ class ShellManager:
                 hostname=Configs.basic_config.kali['hostname'],
                 username=Configs.basic_config.kali['username'],
                 password=Configs.basic_config.kali['password'],
+                # disabled_algorithms={"pubkeys": ['rsa_sha2_256','rsa_sha2_512']},
+                look_for_keys=False,
                 port=Configs.basic_config.kali['port']
             )
         if self._shell is None:

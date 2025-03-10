@@ -54,7 +54,8 @@ class OllamaChat(ABC):
         self.config = config
         self.client = Client(host=self.config.base_url)
         self.model_name = self.config.llm_model_name
-
+        print(f"#######current model: {self.model_name}#######")
+        print(f"#######current temperature: {self.config.temperature}#######")
     def chat(self, history: List[dict]) -> str:
 
         try:
