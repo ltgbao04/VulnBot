@@ -131,7 +131,7 @@ class LLMConfig(BaseFileSettings):
     context_length: int = 120000
     embedding_url: str = ""
     rerank_model: str = "maidalun1020/bce-reranker-base_v1"
-    temperature: float = 0.1
+    temperature: float = 0.5
     history_len: int = 5
     timeout: int = 600
     proxies: Dict[str, str] = dataclasses.field(default_factory=dict)

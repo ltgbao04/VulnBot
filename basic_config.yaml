@@ -1,12 +1,12 @@
 log_verbose: true
-enable_rag: false
+enable_rag: true
 mode: auto
 KB_ROOT_PATH: /home/songhau/Documents/VulnBot/data/knowledge_base
 http_default_timeout: 300
 kali:
-  hostname: 10.102.197.150
+  hostname: localhost
   port: 22
-  username: root
+  username: songhau
   password: kali
 default_bind_host: 0.0.0.0
 api_server:

@@ -7,7 +7,7 @@ embedding_type: local
 context_length: 120000
 embedding_url: ''
 rerank_model: maidalun1020/bce-reranker-base_v1
-temperature: 0.1
+temperature: 0.5
 history_len: 5
 timeout: 600
 proxies: {}
