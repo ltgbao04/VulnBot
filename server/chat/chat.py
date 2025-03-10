@@ -2,6 +2,9 @@ import asyncio
 import re
 import time
 
+from pydantic import BaseModel
+import json 
+
 import httpx
 from typing import List, Optional
 from abc import ABC
@@ -20,6 +23,12 @@ from utils.log_common import build_logger
 
 logger = build_logger()
 
+
+class TaskPlan(BaseModel):
+    id: str
+    dependent_task_ids: List[str]
+    instruction: str
+    action: str
 
 class OpenAIChat(ABC):
     def __init__(self, config):
@@ -77,6 +86,44 @@ class OllamaChat(ABC):
         except httpx.HTTPStatusError as e:
             return f"**ERROR**: {str(e)}"
 
+# class OllamaChat(ABC):
+#     def __init__(self, config):
+#         self.config = config
+#         self.client = Client(host=self.config.base_url)
+#         self.model_name = self.config.llm_model_name
+#         print(f"#######current model: {self.model_name}#######")
+#         print(f"#######current temperature: {self.config.temperature}#######")
+#     def chat(self, history: List[dict]) -> List[TaskPlan]:
+
+#         try:
+#             options = {
+#                 "temperature": self.config.temperature,
+#             }
+#             print(f"QUESTION ----->: {history}")
+#             response = self.client.chat(
+#                 model=self.model_name,
+#                 messages=history,
+#                 options=options,
+#                 keep_alive=-1
+#             )
+#             raw_output = response["message"]["content"]
+#             raw_output = re.sub(r"<think>.*?</think>", "", raw_output, flags=re.DOTALL).strip()
+#             print(f"RAW ANSWER -------->: {raw_output}")
+
+#             # json_match = re.search(r"\[.*\]", raw_output, re.DOTALL)
+#             # if json_match:
+#             #     json_text = json_match.group(0)
+#             # else:
+#             #     return "No JSON found in response"
+
+#             # tasks = json.loads(json_text)
+#             # task_objects = [TaskPlan(**task) for task in tasks]
+            
+#             # print(f"ANSWER ----->: {task_objects}")
+#             print("="*50)
+#             return raw_output
+#         except httpx.HTTPStatusError as e:
+#             return f"**ERROR**: {str(e)}"
 
 def _chat(query: str, kb_name=None, conversation_id=None, kb_query=None, summary=True):
     try:

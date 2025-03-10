@@ -16,7 +16,7 @@ class DeepPentestPrompt:
 
     ### **Strict Formatting Instructions**: 
     - **You must wrap the ouput in '<json></json>' tags.**
-    - **Do not use triple backticks (' '''json '), plaintext JSON, or any other format.**
+    - **Do not use triple backticks ('' '''json{}''' ''), plaintext JSON, or any other format.**
     - **If the output is not inside '<json></json>', it will be considered incorrect.**
 
     ## Example (Follow This Exact Structure):

@@ -17,7 +17,9 @@ class WritePlan(BaseModel):
     def run(self, init_description) -> str:
         rsp = _chat(query=DeepPentestPrompt.write_plan, conversation_id=self.plan_chat_id, kb_name=Configs.kb_config.kb_name, kb_query=init_description)
 
-        match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
+        pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
+        match = re.search(pattern, rsp, re.DOTALL)
+        # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
         if match:
             code = match.group(1)
             return code
@@ -39,7 +41,9 @@ class WritePlan(BaseModel):
 
         #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*''')"
         #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
-        pattern = r"(?:<json>\s*([\s\S]*?)\s*</json>|```json\s*([\s\S]*?)\s*```)"
+        # pattern = r"(?:<json>\s*([\s\S]*?)\s*</json>|```json\s*([\s\S]*?)\s*```)"
+        # match = re.search(pattern, rsp, re.DOTALL)
+        pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
         match = re.search(pattern, rsp, re.DOTALL)
         # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
         if match:
