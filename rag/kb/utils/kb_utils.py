@@ -375,6 +375,7 @@ def files2docs_in_thread_file2docs(
     except Exception as e:
         msg = f"从文件 {file.kb_name}/{file.filename} 加载文档时出错：{e}"
         logger.error(f"{e.__class__.__name__}: {msg}")
+        print(f"*****full path file: {file.filepath}********")
         return False, (file.kb_name, file.filename, msg)
 
 
