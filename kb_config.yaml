@@ -1,9 +1,9 @@
 default_vs_type: milvus
 milvus:
-  uri: 'http://localhost:9091/webui'
-  user: ''
-  password: ''
-kb_name: 'kbfp'
+  uri: 'http://localhost:19530'
+  user: 'root'
+  password: 'Milvus'
+kb_name: 'pentest'
 chunk_size: 750
 overlap_size: 150
 top_n: 1

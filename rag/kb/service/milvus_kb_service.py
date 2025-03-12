@@ -52,6 +52,7 @@ class MilvusKBService(KBService):
             enable_dynamic_field=True,
             auto_id=True,
         )
+        print("success")
 
     def do_init(self):
         self._load_milvus()
@@ -84,6 +85,7 @@ class MilvusKBService(KBService):
             doc.metadata.pop(self.milvus._vector_field, None)
         ids = self.milvus.add_documents(docs)
         doc_infos = [{"id": id, "metadata": doc.metadata} for id, doc in zip(ids, docs)]
+        print(f"----------length id in milvus: {len(ids)}----------")
         return doc_infos
 
     def do_delete_doc(self, kb_file: KnowledgeFile, **kwargs):
