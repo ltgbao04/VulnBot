@@ -25,17 +25,17 @@ class ExtractCode(BaseModel):
         {next_task}
         ## Example Cases:
         ### Example1:
-        Input: Next task: Perform OS fingerprinting on the target machine (10.0.2.5). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
-        Output: <execute> nmap -O 10.0.2.5 </execute>
+        Input: Next task: Perform OS fingerprinting on the target machine (10.102.196.3). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
+        Output: <execute> nmap -O 10.102.196.3 </execute>
         ### Example2:
         Input: Next task: Description: Investigate the SSH service on port 22, attempt to establish a connection, and perform a basic enumeration of available files. Command: 
         ```bash
-        ssh user@192.168.10.72
-        password
+        ssh songhau@localhost
+        kali
         ls -la
         cat /etc/passwd
         ```
-        Output: <execute> ssh user@192.168.10.72 </execute> <execute> password </execute> <execute> ls -la </execute> <execute> cat /etc/passwd </execute>
+        Output: <execute> ssh songhau@localhost </execute> <execute> kali </execute> <execute> ls -la </execute> <execute> cat /etc/passwd </execute>
         """
         logger.info(f"next_task: {self.next_task}")
 

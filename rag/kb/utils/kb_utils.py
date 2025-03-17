@@ -163,6 +163,7 @@ def get_loader(loader_name: str, file_path: str, loader_kwargs: Dict = None):
     根据loader_name和文件路径或内容返回文档加载器。
     """
     loader_kwargs = loader_kwargs or {}
+    logger.info(f"Loader kwargs: {loader_kwargs}")
     try:
         if loader_name in [
             "RapidOCRPDFLoader",
@@ -367,17 +368,36 @@ class KnowledgeFile:
         return os.path.getsize(self.filepath)
 
 
+# def files2docs_in_thread_file2docs(
+#         *, file: KnowledgeFile, **kwargs
+# ) -> Tuple[bool, Tuple[str, str, List[Document]]]:
+#     try:
+#         return True, (file.kb_name, file.filename, file.file2text(**kwargs))
+#     except Exception as e:
+#         print(f"*****full path file: {file.filepath}********")
+#         print(f"*****file text:{file.file2text(**kwargs)}******")
+#         msg = f"从文件 {file.kb_name}/{file.filename} 加载文档时出错：{e}"
+#         logger.error(f"{e.__class__.__name__}: {msg}")
+#         return False, (file.kb_name, file.filename, msg)
+
 def files2docs_in_thread_file2docs(
-        *, file: KnowledgeFile, **kwargs
+    *, file: KnowledgeFile, **kwargs
 ) -> Tuple[bool, Tuple[str, str, List[Document]]]:
     try:
         return True, (file.kb_name, file.filename, file.file2text(**kwargs))
     except Exception as e:
+        # Log the full path and file text
+        logger.info(f"Full path file: {file.filepath}")
+        try:
+            logger.info(f"File text: {file.file2text(**kwargs)}")
+        except Exception as inner_e:
+            logger.error(f"Error retrieving file text: {inner_e}")
+        
+        # Log the error
         msg = f"从文件 {file.kb_name}/{file.filename} 加载文档时出错：{e}"
         logger.error(f"{e.__class__.__name__}: {msg}")
-        print(f"*****full path file: {file.filepath}********")
+        
         return False, (file.kb_name, file.filename, msg)
-
 
 def files2docs_in_thread(
         files: List[Union[KnowledgeFile, Tuple[str, str], Dict]],

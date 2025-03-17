@@ -80,83 +80,102 @@ def extract_plan_data(response: str) -> List[Dict[str, Any]]:
 
     return extracted_plans
 
-class WritePlan(BaseModel):
-    plan_chat_id: str
-
-    def run(self, init_description) -> str:
-        rsp = _chat(query=DeepPentestPrompt.write_plan, 
-                   conversation_id=self.plan_chat_id, 
-                   kb_name=Configs.kb_config.kb_name, 
-                   kb_query=init_description)
-
-        # Sử dụng hàm extract_plan_data thay vì regex
-        extracted_plans = extract_plan_data(rsp)
-        
-        # Chuyển danh sách các plan thành chuỗi JSON
-        return json.dumps(extracted_plans)
-
-    def update(self, task_result, success_task, fail_task, init_description) -> str:
-        rsp = _chat(
-            query=DeepPentestPrompt.update_plan.format(
-                current_task=task_result.instruction,
-                init_description=init_description,
-                current_code=task_result.code,
-                task_result=task_result.result,
-                success_task=success_task,
-                fail_task=fail_task
-            ),
-            conversation_id=self.plan_chat_id,
-            kb_name=Configs.kb_config.kb_name,
-            kb_query=task_result.instruction
-        )
-        
-        if rsp == "":
-            return rsp
-
-        # Sử dụng hàm extract_plan_data thay vì regex
-        extracted_plans = extract_plan_data(rsp)
-        
-        # Chuyển danh sách các plan thành chuỗi JSON
-        return json.dumps(extracted_plans)
-
 # class WritePlan(BaseModel):
 #     plan_chat_id: str
-
 #     def run(self, init_description) -> str:
-#         rsp = _chat(query=DeepPentestPrompt.write_plan, conversation_id=self.plan_chat_id, kb_name=Configs.kb_config.kb_name, kb_query=init_description)
+#         # Gọi LLM để lấy kế hoạch ban đầu
+#         rsp = _chat(
+#             query=DeepPentestPrompt.write_plan, 
+#             conversation_id=self.plan_chat_id, 
+#             kb_name=Configs.kb_config.kb_name, 
+#             kb_query=init_description
+#         )
 
-#         pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
-#         match = re.search(pattern, rsp, re.DOTALL)
-#         # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
-#         if match:
-#             code = match.group(1)
-#             return code
+#         # Gọi LLM để sửa lại định dạng JSON nếu cần, trực tiếp trong hàm run
+#         fixed_response = _chat(
+#             query=DeepPentestPrompt.fix_json.format(raw_response=rsp),
+#             conversation_id=self.plan_chat_id,
+#             kb_name=Configs.kb_config.kb_name,
+#             kb_query=rsp
+#         )
+#         print(f"*********fixed rsp in run: {fixed_response}*********")
+#         # Trích xuất các plan từ JSON đã được sửa
+#         extracted_plans = extract_plan_data(fixed_response)
+#         return json.dumps(extracted_plans)
+
+
 
 #     def update(self, task_result, success_task, fail_task, init_description) -> str:
+#         # Gọi LLM để cập nhật kế hoạch dựa trên kết quả task
 #         rsp = _chat(
-#             query=DeepPentestPrompt.update_plan.format(current_task=task_result.instruction,
-#                                                       init_description=init_description,
-#                                                       current_code=task_result.code,
-#                                                       task_result=task_result.result,
-#                                                       success_task=success_task,
-#                                                       fail_task=fail_task),
+#             query=DeepPentestPrompt.update_plan.format(
+#                 current_task=task_result.instruction,
+#                 init_description=init_description,
+#                 current_code=task_result.code,
+#                 task_result=task_result.result,
+#                 success_task=success_task,
+#                 fail_task=fail_task
+#             ),
 #             conversation_id=self.plan_chat_id,
 #             kb_name=Configs.kb_config.kb_name,
 #             kb_query=task_result.instruction
 #         )
-#         if rsp == "":
-#             return rsp
 
-#         #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*''')"
-#         #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
-#         # pattern = r"(?:<json>\s*([\s\S]*?)\s*</json>|```json\s*([\s\S]*?)\s*```)"
-#         # match = re.search(pattern, rsp, re.DOTALL)
-#         pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
-#         match = re.search(pattern, rsp, re.DOTALL)
-#         # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
-#         if match:
-#             code = match.group(1)
-#             return code
+#         if rsp == "":
+#             return rsp  
+#         # Gọi LLM để sửa định dạng JSON ngay trong hàm update
+
+#         fixed_response = _chat(
+#             query=DeepPentestPrompt.fix_json.format(raw_response=rsp),
+#             conversation_id=self.plan_chat_id,
+#             kb_name=Configs.kb_config.kb_name,
+#             kb_query=rsp
+#         )
+#         print(f"*********fixed rsp in update: {fixed_response}*********")
+#         extracted_plans = extract_plan_data(fixed_response)
+#         return json.dumps(extracted_plans)
+
+
+
+
+class WritePlan(BaseModel):
+    plan_chat_id: str
+
+    def run(self, init_description) -> str:
+        rsp = _chat(query=DeepPentestPrompt.write_plan, conversation_id=self.plan_chat_id, kb_name=Configs.kb_config.kb_name, kb_query=init_description)
+
+        pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
+        match = re.search(pattern, rsp, re.DOTALL)
+        # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
+        if match:
+            code = match.group(1)
+            return code
+
+    def update(self, task_result, success_task, fail_task, init_description) -> str:
+        rsp = _chat(
+            query=DeepPentestPrompt.update_plan.format(current_task=task_result.instruction,
+                                                      init_description=init_description,
+                                                      current_code=task_result.code,
+                                                      task_result=task_result.result,
+                                                      success_task=success_task,
+                                                      fail_task=fail_task),
+            conversation_id=self.plan_chat_id,
+            kb_name=Configs.kb_config.kb_name,
+            kb_query=task_result.instruction
+        )
+        if rsp == "":
+            return rsp
+
+        #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*''')"
+        #pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
+        # pattern = r"(?:<json>\s*([\s\S]*?)\s*</json>|```json\s*([\s\S]*?)\s*```)"
+        # match = re.search(pattern, rsp, re.DOTALL)
+        pattern = r"(?:<json>(.*?)</json>|'''json\s*(.*?)\s*'''|```json\s*(.*?)\s*```)"
+        match = re.search(pattern, rsp, re.DOTALL)
+        # match = re.search(r'<json>(.*?)</json>', rsp, re.DOTALL)
+        if match:
+            code = match.group(1)
+            return code
 
 
 def parse_tasks(response: str, current_plan: Plan):

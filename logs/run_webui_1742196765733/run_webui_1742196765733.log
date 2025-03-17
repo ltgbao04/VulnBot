@@ -1,0 +1,8 @@
+2025-03-17 14:32:47,975 sentence_transformers.SentenceTransformer 920481 INFO     Use pytorch device_name: cpu
+2025-03-17 14:32:47,976 sentence_transformers.SentenceTransformer 920481 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-17 14:37:05,423 sentence_transformers.SentenceTransformer 920481 INFO     Use pytorch device_name: cpu
+2025-03-17 14:37:05,423 sentence_transformers.SentenceTransformer 920481 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-17 14:37:06,718 sentence_transformers.SentenceTransformer 920481 INFO     Use pytorch device_name: cpu
+2025-03-17 14:37:06,718 sentence_transformers.SentenceTransformer 920481 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-17 14:37:17,335 httpx        920481 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
+2025-03-17 14:37:20,101 pymilvus.milvus_client.milvus_client 920481 ERROR    Failed to create new connection using: 3e52e33e12574f719b69195838aa1ea4

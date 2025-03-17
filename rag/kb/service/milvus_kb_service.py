@@ -56,6 +56,7 @@ class MilvusKBService(KBService):
 
     def do_init(self):
         self._load_milvus()
+        self.get_doc_count()
 
     def do_drop_kb(self):
         if self.milvus.col:
@@ -94,10 +95,19 @@ class MilvusKBService(KBService):
         )
         if self.milvus.col:
             self.milvus.col.delete(expr=f"pk in {id_list}")
+        self.get_doc_count()
 
     def do_clear_vs(self):
         if self.milvus.col:
             self.do_drop_kb()
             self.do_init()
 
-
+    def get_doc_count(self) -> int:
+        milvus_kb_service = MilvusKBService
+        if self.milvus.col:
+            count = self.milvus.col.num_entities
+            print(f"Total number of documents in collection {self.kb_name}: {count}")
+            return count
+        else:
+            print("No pdf")
+            return 0

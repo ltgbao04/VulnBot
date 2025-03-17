@@ -74,9 +74,9 @@ class OllamaChat(ABC):
             print(f"QUESTION ----->: {history}")
             response = self.client.chat(
                 model=self.model_name,
-                messages=history,
-                options=options,
-                keep_alive=-1
+                messages=history #,
+                # options=options,
+                #keep_alive=600
             )
             ans = response["message"]["content"]
             ans = re.sub(r"<think>.*?</think>", "", ans, flags=re.DOTALL).strip()

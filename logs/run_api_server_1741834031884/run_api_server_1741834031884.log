@@ -1,0 +1,4 @@
+2025-03-13 09:48:35,632 sentence_transformers.SentenceTransformer 92075 INFO     Use pytorch device_name: cpu
+2025-03-13 09:48:35,632 sentence_transformers.SentenceTransformer 92075 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 09:48:40,181 sentence_transformers.SentenceTransformer 92075 INFO     Use pytorch device_name: cpu
+2025-03-13 09:48:40,181 sentence_transformers.SentenceTransformer 92075 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

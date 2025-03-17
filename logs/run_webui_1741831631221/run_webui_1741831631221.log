@@ -1,0 +1,7 @@
+2025-03-13 09:07:14,642 sentence_transformers.SentenceTransformer 88369 INFO     Use pytorch device_name: cpu
+2025-03-13 09:07:14,643 sentence_transformers.SentenceTransformer 88369 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 09:07:21,039 sentence_transformers.SentenceTransformer 88369 INFO     Use pytorch device_name: cpu
+2025-03-13 09:07:21,040 sentence_transformers.SentenceTransformer 88369 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 09:07:52,431 httpx        88369 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 09:07:52,517 sentence_transformers.SentenceTransformer 88369 INFO     Use pytorch device_name: cpu
+2025-03-13 09:07:52,518 sentence_transformers.SentenceTransformer 88369 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

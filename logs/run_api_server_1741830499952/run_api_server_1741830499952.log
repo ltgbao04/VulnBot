@@ -1,0 +1,16 @@
+2025-03-13 08:50:09,716 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:50:09,716 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:50:15,231 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:50:15,232 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:51:50,523 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:51:50,524 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:51:55,458 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:51:55,459 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:52:33,986 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:52:33,986 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:52:39,699 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:52:39,699 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:53:31,021 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:53:31,022 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:53:35,546 sentence_transformers.SentenceTransformer 85047 INFO     Use pytorch device_name: cpu
+2025-03-13 08:53:35,546 sentence_transformers.SentenceTransformer 85047 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

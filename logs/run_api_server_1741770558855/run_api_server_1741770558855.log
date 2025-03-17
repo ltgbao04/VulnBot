@@ -1,0 +1,3 @@
+2025-03-12 16:09:52,961 sentence_transformers.SentenceTransformer 6813 INFO     Use pytorch device_name: cpu
+2025-03-12 16:09:52,961 sentence_transformers.SentenceTransformer 6813 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-12 16:10:10,174 pymilvus.milvus_client.milvus_client 6813 ERROR    Failed to create new connection using: 3cf77e40c06942d3b38fba3ba886298b

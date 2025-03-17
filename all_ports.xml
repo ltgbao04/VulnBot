@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Mar 17 15:04:58 2025 as: nmap -sS -p- -vv -oA all_ports 10.102.196.3 -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -vv -oA all_ports 10.102.196.3" start="1742198698" startstr="Mon Mar 17 15:04:58 2025" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1742198698"/>
+<taskend task="ARP Ping Scan" time="1742198698" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1742198698"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1742198698"/>
+<taskbegin task="SYN Stealth Scan" time="1742198698"/>
+<taskend task="SYN Stealth Scan" time="1742198701" extrainfo="65535 total ports"/>
+<host starttime="1742198698" endtime="1742198701"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.102.196.3" addrtype="ipv4"/>
+<address addr="02:42:0A:66:C4:03" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="resets" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="27" rttvar="4" to="100000"/>
+</host>
+<runstats><finished time="1742198701" timestr="Mon Mar 17 15:05:01 2025" elapsed="3.17" summary="Nmap done at Mon Mar 17 15:05:01 2025; 1 IP address (1 host up) scanned in 3.17 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

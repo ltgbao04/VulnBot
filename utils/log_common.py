@@ -48,7 +48,7 @@ def build_logger(log_file: str = "Auto-Pentest"):
             log_file = f"{log_file}.log"
         if not os.path.isabs(log_file):
             log_file = str((Configs.basic_config.LOG_PATH / log_file).resolve())
-        logger.add(log_file, colorize=False, filter=_filter_logs)
+        logger.add(log_file, colorize=False, filter=_filter_logs, level='INFO')
 
     return logger
 

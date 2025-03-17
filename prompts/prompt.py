@@ -34,6 +34,80 @@ class DeepPentestPrompt:
     </json>
     """
 
+    fix_json: str = """## Fix JSON Response:
+    The provided response may contain incorrectly formatted JSON. Your task is to extract and return a properly formatted JSON.
+
+    ### **Rules:**
+    - Ensure the JSON is **valid and correctly structured**.
+    - The JSON **must** follow this structure:
+      ```json
+      [
+        {
+          "id": "<string>",
+          "dependent_task_ids": ["<string>", ...],
+          "instruction": "<string>",
+          "action": "<string>"
+        }
+      ]
+      ```
+    - If the response contains JSON wrapped in `<json></json>`, extract and correct it.
+    - If the response contains JSON with incorrect formatting (extra text, missing brackets, incorrect syntax), fix and return only the corrected JSON.
+    - **Do not** return any additional explanation or metadata. Just return the corrected JSON.
+
+    ### **Example Input:**
+    ```
+    Here is your plan:
+    json
+    [
+      {
+        id: "task_1",
+        dependent_task_ids: [],
+        instruction: "Scan the target machine.",
+        action: "Shell"
+      }
+    ]
+    </json>
+    ```
+
+    ### **Example Output:**
+    ```
+    <json>
+    [
+      {
+        "id": "task_1",
+        "dependent_task_ids": [],
+        "instruction": "Scan the target machine.",
+        "action": "Shell"
+      }
+    ]
+    </json>
+    ```
+    """
+
+    fix_json: str = """You are an autonomous assistant whose task is to fix JSON responses.
+
+    You will be provided with a raw response that may include extra characters, formatting errors, missing fields, or unnecessary fields.
+
+    Your task is to process the input and output a valid JSON that meets the following requirements:
+
+    1. Remove any extra text outside the <json> and </json> tags. The output must be strictly wrapped within <json> and </json> tags with no additional characters or whitespace outside these tags.
+
+    2. The JSON must be a list of objects, where each object includes exactly the following fields:
+
+      - "id": a unique identifier (default to "unknown_id" if missing).
+      - "dependent_task_ids": a list of strings (default to an empty list if missing).
+      - "instruction": a string (default to an empty string if missing).
+      - "action": a string (default to "unknown_action" if missing).
+
+    3. Remove any extra fields that are not in the list above.
+
+    4. Ensure the JSON inside the tags is properly formatted and fully parsable.
+
+    Input: {raw_response}
+
+    Output:"""
+
+
     write_code: str = """You play as an autonomous penetration testing assistant running on Kali Linux 2023.
     Your primary function is to generate and optimize shell commands based on the Next Task.
     Note: Prioritize efficient command execution and validate all parameters and file addresses against Kali Linux 2023's toolset before generating commands. 
@@ -64,13 +138,13 @@ class DeepPentestPrompt:
     ### Case 1
     Input: Next task: Description: Investigate the SSH service on port 22, attempt to establish a connection, and perform a basic enumeration of available files. 
     Command to be executed: 
-    `ssh user@192.168.10.72` 
+    `ssh songhau@localhost` 
     Password to be entered:
-    `test`
-    Output: <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>
+    `kali`
+    Output: <execute> ssh songhau@localhost </execute> <execute> kali </execute>
     ### Case 2
-    Input: Next task: Perform OS fingerprinting on the target machine (10.0.2.5). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
-    Output: <execute> nmap -O 10.0.2.5 </execute>"""
+    Input: Next task: Perform OS fingerprinting on the target machine (10.102.196.3). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
+    Output: <execute> nmap -O 10.102.196.3 </execute>"""
 
     write_summary: str = """You are an autonomous agent tasked with summarizing your historical activities.
     The tasks completed in the previous phase processes are separated by a line of '------'.

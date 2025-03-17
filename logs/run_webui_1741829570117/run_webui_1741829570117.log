@@ -1,0 +1,18 @@
+2025-03-13 08:32:53,066 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:32:53,067 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:34:14,934 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:34:14,934 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:34:29,216 pymilvus.milvus_client.milvus_client 83192 ERROR    Failed to create new connection using: 5c20adb7ebc3491ca1955a42e50bfc1b
+2025-03-13 08:35:14,201 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:35:14,201 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:35:19,921 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:35:19,921 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:35:31,448 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:35:31,448 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:36:05,982 httpx        83192 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:36:06,680 httpx        83192 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:36:06,695 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:36:06,695 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:47:18,929 httpx        83192 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:47:18,945 sentence_transformers.SentenceTransformer 83192 INFO     Use pytorch device_name: cpu
+2025-03-13 08:47:18,946 sentence_transformers.SentenceTransformer 83192 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

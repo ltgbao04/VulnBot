@@ -14,8 +14,11 @@ def get_ocr(use_cuda: bool = True) -> "RapidOCR":
         ocr = RapidOCR(
             det_use_cuda=use_cuda, cls_use_cuda=use_cuda, rec_use_cuda=use_cuda
         )
+
+        print("======Using RapidOCR paddle======")
     except ImportError:
         from rapidocr_onnxruntime import RapidOCR
 
         ocr = RapidOCR()
+        print("======Using RapidOCR onnxruntime======")
     return ocr

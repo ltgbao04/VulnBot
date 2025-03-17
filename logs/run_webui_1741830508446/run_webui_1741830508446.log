@@ -1,0 +1,23 @@
+2025-03-13 08:48:31,234 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:48:31,235 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:50:00,230 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:50:00,231 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:50:04,207 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:50:04,208 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:50:14,589 pymilvus.milvus_client.milvus_client 85135 ERROR    Failed to create new connection using: 68b0171d2a044fa68fc1f5820bce23ba
+2025-03-13 08:50:26,324 httpx        85135 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:50:26,389 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:50:26,389 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:52:05,174 httpx        85135 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:52:05,194 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:52:05,194 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:52:25,833 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:52:25,834 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:52:49,927 httpx        85135 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:52:49,937 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:52:49,938 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:53:13,539 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:53:13,539 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-13 08:53:45,576 httpx        85135 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-13 08:53:45,592 sentence_transformers.SentenceTransformer 85135 INFO     Use pytorch device_name: cpu
+2025-03-13 08:53:45,592 sentence_transformers.SentenceTransformer 85135 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

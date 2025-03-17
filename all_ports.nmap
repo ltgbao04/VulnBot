@@ -1,0 +1,12 @@
+# Nmap 7.80 scan initiated Mon Mar 17 15:04:58 2025 as: nmap -sS -p- -vv -oA all_ports 10.102.196.3
+Nmap scan report for 10.102.196.3
+Host is up, received arp-response (0.000027s latency).
+Scanned at 2025-03-17 15:04:58 +07 for 3s
+Not shown: 65534 closed ports
+Reason: 65534 resets
+PORT   STATE SERVICE REASON
+22/tcp open  ssh     syn-ack ttl 64
+MAC Address: 02:42:0A:66:C4:03 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon Mar 17 15:05:01 2025 -- 1 IP address (1 host up) scanned in 3.17 seconds

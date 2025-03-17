@@ -1,0 +1,3 @@
+2025-03-12 11:34:57,862 sentence_transformers.SentenceTransformer 4622 INFO     Use pytorch device_name: cpu
+2025-03-12 11:34:57,863 sentence_transformers.SentenceTransformer 4622 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-12 11:35:15,313 pymilvus.milvus_client.milvus_client 4622 ERROR    Failed to create new connection using: 6d672a5f6d3748038a3a670efeb2bf17
