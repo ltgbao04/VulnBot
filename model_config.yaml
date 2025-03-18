@@ -1,7 +1,7 @@
-api_key: https://8fd5-34-90-254-35.ngrok-free.app
+api_key: https://487d-104-196-148-46.ngrok-free.app
 llm_model: ollama
-base_url: https://8fd5-34-90-254-35.ngrok-free.app
-llm_model_name: hf.co/unsloth/QwQ-32B-GGUF:Q5_K_M
+base_url: https://487d-104-196-148-46.ngrok-free.app
+llm_model_name: hf.co/bartowski/Qwen_QwQ-32B-GGUF:Q4_K_L
 embedding_models: maidalun1020/bce-embedding-base_v1
 embedding_type: local
 context_length: 120000

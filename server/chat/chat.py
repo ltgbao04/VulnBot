@@ -58,6 +58,7 @@ class OpenAIChat(ABC):
             return f"**ERROR**: {str(e)}"
 
 
+            
 class OllamaChat(ABC):
     def __init__(self, config):
         self.config = config
@@ -71,10 +72,11 @@ class OllamaChat(ABC):
             options = {
                 "temperature": self.config.temperature,
             }
-            print(f"QUESTION ----->: {history}. Note: target machine IP: 10.102.196.3")
+            history[-1]['content'] = history[-1]['content'] + "(Note: target machine IP: 10.102.196.3)"
+            print(f"QUESTION ----->: {history}")
             response = self.client.chat(
                 model=self.model_name,
-                messages=history ,
+                messages=history,
                 #options=options,
                 keep_alive=-1
             )
