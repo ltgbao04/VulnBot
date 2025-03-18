@@ -1,0 +1,15 @@
+2025-03-18 10:18:35,983 sentence_transformers.SentenceTransformer 1042923 INFO     Use pytorch device_name: cpu
+2025-03-18 10:18:35,983 sentence_transformers.SentenceTransformer 1042923 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-18 10:19:35,316 sentence_transformers.SentenceTransformer 1042923 INFO     Use pytorch device_name: cpu
+2025-03-18 10:19:35,317 sentence_transformers.SentenceTransformer 1042923 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-18 10:19:45,047 httpx        1042923 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
+2025-03-18 10:19:46,943 sentence_transformers.SentenceTransformer 1042923 INFO     Use pytorch device_name: cpu
+2025-03-18 10:19:46,943 sentence_transformers.SentenceTransformer 1042923 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-18 10:19:55,765 httpx        1042923 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
+2025-03-18 10:20:10,311 sentence_transformers.SentenceTransformer 1042923 INFO     Use pytorch device_name: cpu
+2025-03-18 10:20:10,311 sentence_transformers.SentenceTransformer 1042923 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-18 10:20:19,298 httpx        1042923 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/delete_docs "HTTP/1.1 200 OK"
+2025-03-18 10:20:20,838 sentence_transformers.SentenceTransformer 1042923 INFO     Use pytorch device_name: cpu
+2025-03-18 10:20:20,838 sentence_transformers.SentenceTransformer 1042923 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-18 15:13:20,804 sentence_transformers.SentenceTransformer 1042923 INFO     Use pytorch device_name: cpu
+2025-03-18 15:13:20,805 sentence_transformers.SentenceTransformer 1042923 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

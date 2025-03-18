@@ -71,12 +71,12 @@ class OllamaChat(ABC):
             options = {
                 "temperature": self.config.temperature,
             }
-            print(f"QUESTION ----->: {history}")
+            print(f"QUESTION ----->: {history}. Note: target machine IP: 10.102.196.3")
             response = self.client.chat(
                 model=self.model_name,
-                messages=history #,
-                # options=options,
-                #keep_alive=600
+                messages=history ,
+                #options=options,
+                keep_alive=-1
             )
             ans = response["message"]["content"]
             ans = re.sub(r"<think>.*?</think>", "", ans, flags=re.DOTALL).strip()

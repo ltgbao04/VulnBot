@@ -161,7 +161,7 @@ class DeepPentestPrompt:
     - Update the plan in accordance with the provided task execution result. 
     - Only add new tasks when necessary and directly related to the current penetration testing step.
     - Ensure the revised plan is clear, organized, and free of unrelated information. 
-    - Always include the target IP or port in the instruction.
+    - Always include the target IPss or port in the instruction.
     - If no task is applicable for this stage, the output should be empty.
     - You should also take into account the issue of shell sharing. For instance, if the previous task has already entered a different shell, there’s no need to re-execute the preceding command.
     ## Init Description:

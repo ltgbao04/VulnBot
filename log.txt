@@ -1,0 +1,17 @@
+Do you want to continue from a previous session? (y/n)
+
+
+
+
+
+
+                                                        Do you want to continue from a previous session? (y/n) n
+Please describe the penetration testing task.
+>
+
+
+
+
+
+   > pentest 10.102.196.3Please describe the penetration testing task.
+> pentest 10.102.196.3
