@@ -1,0 +1,46 @@
+2025-03-19 09:20:29,149 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 09:20:29,150 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 09:21:49,444 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 09:21:49,445 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 09:22:03,391 pymilvus.milvus_client.milvus_client 1184960 ERROR    Failed to create new connection using: 10db309869c54c7bb6d23c825ae80ed5
+2025-03-19 09:22:37,088 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-19 09:22:37,157 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 09:22:37,158 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:26:17,988 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 10:26:17,989 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:27:43,650 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 10:27:43,650 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:38:45,256 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-19 10:38:45,278 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 10:38:45,278 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:40:04,591 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 10:40:04,592 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:58:28,872 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-19 10:58:28,894 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 10:58:28,895 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:59:28,903 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 10:59:28,903 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 10:59:37,741 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
+2025-03-19 11:00:01,462 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:01,462 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:01,693 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:01,693 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:02,020 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:02,020 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:02,827 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:02,828 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:03,009 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:03,009 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:03,185 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:03,185 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:04,181 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:04,181 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:11,438 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:11,445 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:34,358 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
+2025-03-19 11:00:39,776 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:00:39,777 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-19 11:00:47,871 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
+2025-03-19 11:13:25,638 httpx        1184960 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-19 11:13:25,661 sentence_transformers.SentenceTransformer 1184960 INFO     Use pytorch device_name: cpu
+2025-03-19 11:13:25,661 sentence_transformers.SentenceTransformer 1184960 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

@@ -64,24 +64,35 @@ class OllamaChat(ABC):
         self.config = config
         self.client = Client(host=self.config.base_url)
         self.model_name = self.config.llm_model_name
+        self.options = {
+            "temperature": self.config.temperature,
+            "top_k": 15
+        }
         print(f"#######current model: {self.model_name}#######")
         print(f"#######current temperature: {self.config.temperature}#######")
+        print(f"#######current top_k: {self.options['top_k']}#######")
     def chat(self, history: List[dict]) -> str:
 
         try:
-            options = {
-                "temperature": self.config.temperature,
-            }
+            # options = {
+            #     "temperature": self.config.temperature,
+            #     "top_k": 20
+            # }
             history[-1]['content'] = history[-1]['content'] + "(Note: target machine IP: 10.102.196.3)"
+            # history[-1]['content'] += "Think concisely but intelligently, focusing on key points.(Note: target machine IP: 10.102.196.3)"
             print(f"QUESTION ----->: {history}")
             response = self.client.chat(
                 model=self.model_name,
                 messages=history,
-                #options=options,
+                options=self.options,
                 keep_alive=-1
             )
             ans = response["message"]["content"]
-            ans = re.sub(r"<think>.*?</think>", "", ans, flags=re.DOTALL).strip()
+            if("<think>" in ans):
+                if("EXAONE" in self.model_name):
+                    ans = re.sub(r"<thought>.*?</thought>", "", ans, flags=re.DOTALL).strip()
+                else:
+                    ans = re.sub(r"<think>.*?</think>", "", ans, flags=re.DOTALL).strip()
             print(f"ANSWER ----->: {ans}")
             print("="*50)
             return ans
@@ -153,7 +164,8 @@ def _chat(query: str, kb_name=None, conversation_id=None, kb_query=None, summary
                 query = f"{query}\n\n\n Ensure that the **Overall Target** IP or the IP from the **Initial Description** is prioritized. You will respond to questions and generate tasks based on the provided penetration test case materials: {context}. \n"
 
         if conversation_id is not None and len(query) > 10000:
-            query = query[:10000]
+            # query = query[:10000]
+            query = query[:Configs.llm_config.context_length]
         else:
             query = query[:Configs.llm_config.context_length]
 
