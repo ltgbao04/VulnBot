@@ -3,7 +3,7 @@ milvus:
   uri: 'http://localhost:19530'
   user: 'root'
   password: 'Milvus'
-kb_name: 'kbfp'
+kb_name: 'henoqerld'
 chunk_size: 750
 overlap_size: 150
 top_n: 1

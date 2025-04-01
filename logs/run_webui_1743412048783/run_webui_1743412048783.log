@@ -1,0 +1,14 @@
+2025-03-31 16:07:31,637 sentence_transformers.SentenceTransformer 2395434 INFO     Use pytorch device_name: cpu
+2025-03-31 16:07:31,637 sentence_transformers.SentenceTransformer 2395434 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-31 16:08:07,564 sentence_transformers.SentenceTransformer 2395434 INFO     Use pytorch device_name: cpu
+2025-03-31 16:08:07,565 sentence_transformers.SentenceTransformer 2395434 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-31 16:09:15,373 sentence_transformers.SentenceTransformer 2395434 INFO     Use pytorch device_name: cpu
+2025-03-31 16:09:15,374 sentence_transformers.SentenceTransformer 2395434 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-31 16:12:49,013 httpx        2395434 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-03-31 16:12:49,100 sentence_transformers.SentenceTransformer 2395434 INFO     Use pytorch device_name: cpu
+2025-03-31 16:12:49,101 sentence_transformers.SentenceTransformer 2395434 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-31 16:13:02,946 pymilvus.milvus_client.milvus_client 2395434 ERROR    Failed to create new connection using: 22b8770d2a36453193cccd53f7875ee0
+2025-03-31 16:13:58,024 sentence_transformers.SentenceTransformer 2395434 INFO     Use pytorch device_name: cpu
+2025-03-31 16:13:58,024 sentence_transformers.SentenceTransformer 2395434 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-03-31 16:14:05,161 sentence_transformers.SentenceTransformer 2395434 INFO     Use pytorch device_name: cpu
+2025-03-31 16:14:05,161 sentence_transformers.SentenceTransformer 2395434 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

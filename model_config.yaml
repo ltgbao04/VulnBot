@@ -1,7 +1,7 @@
-api_key: https://a430-115-78-13-71.ngrok-free.app
+api_key: https://8188-35-243-203-217.ngrok-free.app
 llm_model: ollama
-base_url: https://a430-115-78-13-71.ngrok-free.app
-llm_model_name: qwq:32b-fp16 
+base_url: https://8188-35-243-203-217.ngrok-free.app
+llm_model_name: Qwen-QwQ-32b-Pentest-CoT-Q8_0-GGUF
 embedding_models: maidalun1020/bce-embedding-base_v1
 embedding_type: local
 context_length: 120000
