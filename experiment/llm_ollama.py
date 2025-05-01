@@ -159,14 +159,15 @@ class OLLAMAPI:
         return response
 
 class OPENAI:
-    def __init__(self):
+    def __init__(self,config):
         self.conversation_dict: Dict[str, Conversation] = {}
         self.history_length = 5  # Max number of messages to retain in conversation history
         self.error_waiting_time = 3  # Retry waiting time in seconds
+        self.config = config 
 
     def _chat_completion(self, history: List[dict]) -> str:
         try:
-            client = OpenAI(api_key='', base_url='', timeout=600)
+            client = OpenAI(api_key=self.config.api_key, base_url=self.config.base_url, timeout=600)
 
             response = client.chat.completions.create(
                 model="",
@@ -176,7 +177,7 @@ class OPENAI:
             ans = response.choices[0].message.content
             return ans
         except Exception as e:
-            logger.error(e)
+            logger.error(f"Error in chat completions: {e}")
 
     def send_new_message(self, message: str, image_url: str = None):
         # create a message
@@ -199,6 +200,8 @@ class OPENAI:
         message.ask = data
         message.request_start_timestamp = start_time
         response = self._chat_completion(history)
+        if response is None:
+                    return "Error in API call", None
         message.answer = [{"role": "assistant", "content": response}]
         message.request_end_timestamp = time.time()
         message.time_escaped = (

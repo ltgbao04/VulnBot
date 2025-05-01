@@ -124,7 +124,8 @@ class DeepPentestPrompt:
         3. Commands must use parameters available in Kali Linux 2023
         4. Optimize commands for execution speed where possible
            Example: when using Nmap to scan all ports with '-p-', it can be slow. To speed it up, use '-T5'
-        5. Cannot add command
+        5. If a command requires a password (e.g., SSH), either use `sshpass` to automate password entry or separate the password input into a dedicated <execute> block
+        6. Cannot add command
     ## Input Format:
     Next Task: [Description of the penetration testing task]
     ## Output Format:
@@ -138,13 +139,13 @@ class DeepPentestPrompt:
     ### Case 1
     Input: Next task: Description: Investigate the SSH service on port 22, attempt to establish a connection, and perform a basic enumeration of available files. 
     Command to be executed: 
-    `ssh songhau@localhost` 
+    `ssh user@192.168.10.72` 
     Password to be entered:
-    `kali`
-    Output: <execute> ssh songhau@localhost </execute> <execute> kali </execute>
+    `test`
+    Output: <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>
     ### Case 2
-    Input: Next task: Perform OS fingerprinting on the target machine (10.102.196.3). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
-    Output: <execute> nmap -O 10.102.196.3 </execute>"""
+    Input: Next task: Perform OS fingerprinting on the target machine (10.0.2.5). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
+    Output: <execute> nmap -O 10.0.2.5 </execute>"""
 
     write_summary: str = """You are an autonomous agent tasked with summarizing your historical activities.
     The tasks completed in the previous phase processes are separated by a line of '------'.

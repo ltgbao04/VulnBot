@@ -57,7 +57,7 @@ class Plan(BaseModel):
         if len(sorted_tasks) != len(self.tasks):
             raise ValueError("Tasks have cyclic dependencies")
 
-        print(f"sorted task (PTG): {sorted_tasks}")
+        #print(f"sorted task (PTG): {sorted_tasks}")
         return sorted_tasks
 
     @property

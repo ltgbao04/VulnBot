@@ -78,7 +78,7 @@ class OllamaChat(ABC):
             #     "temperature": self.config.temperature,
             #     "top_k": 20
             # }
-            history[-1]['content'] = history[-1]['content'] + "(Note: target machine IP: 10.102.196.3)"
+            history[-1]['content'] = history[-1]['content'] 
             # history[-1]['content'] += "Think concisely but intelligently, focusing on key points.(Note: target machine IP: 10.102.196.3)"
             print(f"QUESTION ----->: {history}")
             response = self.client.chat(
@@ -164,8 +164,8 @@ def _chat(query: str, kb_name=None, conversation_id=None, kb_query=None, summary
                 query = f"{query}\n\n\n Ensure that the **Overall Target** IP or the IP from the **Initial Description** is prioritized. You will respond to questions and generate tasks based on the provided penetration test case materials: {context}. \n"
 
         if conversation_id is not None and len(query) > 10000:
-            # query = query[:10000]
-            query = query[:Configs.llm_config.context_length]
+            query = query[:10000]
+            #query = query[:Configs.llm_config.context_length]
         else:
             query = query[:Configs.llm_config.context_length]
 
@@ -180,7 +180,7 @@ def _chat(query: str, kb_name=None, conversation_id=None, kb_query=None, summary
         history = [
             {
                 "role": "system",
-                "content": "You are a helpful assistant",
+                "content": """You are a helpful assistant with strong reasoning capabilities. You will have to pentest the target machine. Focus on what you have found and always remember to replace <target_ip> with the actual IP the user provides and NEVER forget the target IP address. Read carefully the example cases that the user gives (in case you have to execute consecutive commands to get the result). If any tasks need to execute multiple commands, divide it into unique command and wrap it in <execute></execute> tag.(For Example: When ssh to a machine, it prompt for password and the command should be like : <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>...). If you can penetrate to the target machine, remember to escalate privileges, a very important stage.  /no_think""",
             }
         ]
         # Retrieve message history from database, and limit the number of messages

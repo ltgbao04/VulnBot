@@ -179,7 +179,7 @@ class WritePlan(BaseModel):
 
 
 def parse_tasks(response: str, current_plan: Plan):
-    print(f"#######response: {response}#######")
+    #print(f"#######response: {response}#######")
     response = json.loads(response)
 
     tasks = import_tasks_from_json(current_plan.id, response)
