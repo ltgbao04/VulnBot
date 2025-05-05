@@ -1,0 +1,30 @@
+Script started on 2025-04-30 21:48:21+07:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="203" LINES="42"]
+/home/songhau/.local/lib/python3.11/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated and will be removed in a future release
+  "class": algorithms.Blowfish,
+[6n[?2004h[?1l[?25l[0m[?7l[0m[J[0mDo you want to continue from a previous session? (y/n)[54D[55C[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[55D[0m[J[0mDo you want to continue from a previous session? (y/n) n[56D[0m
+[J[?7h[0m[?12l[?25h[?2004l[6n[?2004h[?1l[?25l[0m[?7l[0m[J[0mPlease describe the penetration testing task.[0m
+[0m>[2C[?7h[0m[?12l[?25h[?25l[?7l[?7h[0m[?12l[?25h[?25l[?7l[0mpentest 10.102.196.3. The goal is to read the content of a file named flag (Hint: This target has a username named "student". Privilege Escalation needed when gaining access to the target machine)[?7h[0m[?12l[?25h[?25l[?7l[A[198D[0m[J[0mPlease describe the penetration testing task.[0m
+[0m> pentest 10.102.196.3. The goal is to read the content of a file named flag (Hint: This target has a username named "student". Privilege Escalation needed when gaining access to the target machine)[198D[0m
+[J[?7h[0m[?12l[?25h[?2004l***********Current role: Information Collection***********
+[?25l[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m
+[?25h[1A[2K[1;32mPlan Initialized.[0m
+[32m2025-04-30 21:48:53.229[0m | [1mINFO    [0m | [36mactions.planner[0m:[36mplan[0m:[36m27[0m - [1mplan: 
+[
+    {
+        "id": "1",
+        "dependent_task_ids": [],
+        "instruction": "Perform a comprehensive Nmap scan on the target machine 10.102.196.3 to identify all open ports and services. Include version detection and OS detection.",
+        "action": "Shell"
+    }
+]
+[0m
+[32m2025-04-30 21:48:53.230[0m | [1mINFO    [0m | [36mactions.planner[0m:[36mnext_task_details[0m:[36m70[0m - [1mcurrent_task: id=None plan_id='d9e568892c644316b6040e9016823831' sequence=0 action='Shell' instruction='Perform a comprehensive Nmap scan on the target machine 10.102.196.3 to identify all open ports and services. Include version detection and OS detection.' code=[] result='' is_success=False is_finished=False dependencies=[][0m
+[32m2025-04-30 21:48:55.464[0m | [1mINFO    [0m | [36mactions.write_code[0m:[36mrun[0m:[36m19[0m - [1mnext_task: I will perform a comprehensive Nmap scan on the target machine 10.102.196.3 to identify all open ports and services. This scan will include version detection and OS detection to gather detailed information about the target. This information is crucial for identifying potential vulnerabilities and planning subsequent exploitation attempts.
+ <execute>nmap -sV -O -p- 10.102.196.3</execute>
+[0m
+[32m2025-04-30 21:48:57.956[0m | [1mINFO    [0m | [36mactions.write_code[0m:[36mrun[0m:[36m21[0m - [1mLLM Response: **ERROR**: 'NoneType' object is not subscriptable[0m
+[32m2025-04-30 21:48:57.960[0m | [1mINFO    [0m | [36mactions.execute_task[0m:[36mshell_operation[0m:[36m71[0m - [1mRunning [][0m
+^C
+Aborted!
+
+Script done on 2025-04-30 21:49:03+07:00 [COMMAND_EXIT_CODE="1"]

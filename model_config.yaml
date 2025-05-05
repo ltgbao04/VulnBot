@@ -1,13 +1,13 @@
-api_key: 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
+api_key: dummy
 llm_model: openai
-base_url: https://openrouter.ai/api/v1
-llm_model_name: google/gemini-2.0-flash-exp:free
+base_url: https://1ade-34-82-250-241.ngrok-free.app/v1
+llm_model_name: /kaggle/working/Qwen3-32B-AWQ
 embedding_models: maidalun1020/bce-embedding-base_v1
 embedding_type: local
 context_length: 120000
 embedding_url: ''
 rerank_model: maidalun1020/bce-reranker-base_v1
-temperature: 0.5
+temperature: 0.6
 history_len: 5
 timeout: 1200
 proxies: {}

@@ -44,7 +44,14 @@ class OpenAIChat(ABC):
             response = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=history,
+                max_tokens=2048,
                 temperature=self.config.temperature,
+                top_p=0.95,
+                extra_body={
+                    "top_k": 20,
+                    "min_p": 0.0,
+                    "chat_template_kwargs": {"thinking": True}
+                }
             )
             ans = response.choices[0].message.content
             return ans
@@ -180,7 +187,7 @@ def _chat(query: str, kb_name=None, conversation_id=None, kb_query=None, summary
         history = [
             {
                 "role": "system",
-                "content": """You are a helpful assistant with strong reasoning capabilities. You will have to pentest the target machine. Focus on what you have found and always remember to replace <target_ip> with the actual IP the user provides and NEVER forget the target IP address. Read carefully the example cases that the user gives (in case you have to execute consecutive commands to get the result). If any tasks need to execute multiple commands, divide it into unique command and wrap it in <execute></execute> tag.(For Example: When ssh to a machine, it prompt for password and the command should be like : <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>...). If you can penetrate to the target machine, remember to escalate privileges, a very important stage.  /no_think""",
+                "content": """You are a helpful assistant with strong reasoning capabilities. You will have to pentest the target machine. Focus on what you have found and always remember to replace <target_ip> with the actual IP the user provides and NEVER forget the target IP address. Read carefully the example cases that the user gives (in case you have to execute consecutive commands to get the result). If any tasks need to execute multiple commands, divide it into unique command and wrap it in <execute></execute> tag.(For Example: When ssh to a machine, it prompt for password and the command should be like : <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>...). If any execution that prompt for password, ALWAYS remember to execute it as the ssh example for the corresponding user. Moreover, Do not execute or retry unsuccessful tasks more than twice time. Lastly, If you can penetrate to the target machine, remember to escalate privileges, a very important stage /no_think ( Note: You are conducting a penetration testing as a user "songhau", so do not execute anything related to this user!!!) """,
             }
         ]
         # Retrieve message history from database, and limit the number of messages

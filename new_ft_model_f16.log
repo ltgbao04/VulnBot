@@ -1,0 +1,131 @@
+Script started on 2025-04-01 10:29:15+07:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="100" LINES="31"]
+/home/songhau/.local/lib/python3.11/site-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated and will be removed in a future release
+  "class": algorithms.Blowfish,
+[6n[?2004h[?1l[?25l[0m[?7l[0m[J[0mDo you want to continue from a previous session? (y/n)[54D[55C[?7h[0m[?12l[?25h[?25l[?7l[55D[0mDo you want to continue from a previous session? (y/n)[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[0m [24A[55C[?7h[0m[?12l[?25h[?25l[?7l[55D[0m[J[0mDo you want to continue from a previous session? (y/n) n[56D[0m
+[J[?7h[0m[?12l[?25h[?2004l[6n[?2004h[?1l[?25l[0m[?7l[0m[J[0mPlease describe the penetration testing task.[0m
+[0m>[2C[?7h[0m[?12l[?25h[?25l[?7l[2D[0m>[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[0m [22A[2C[?7h[0m[?12l[?25h[?25l[?7l[0mpentest 10.102.196.3. First, using nmap to scan it. Secondly, use hydra to brute-force ssh servic[99Ce[0m
+[0m with username "student" and list of passwords from /usr/share/wordlists/rockyou.txt. Thirdly, Use [99Ct[0m
+[0mhe credential found to log in the target machine. When you successfully login with ssh, try to esca[99Cl[0m
+[0mate privileges with sudo -i. Lastly, find a file named flag and display its content. (Note: Ignore [99Ci[0m
+[0mrrelevant command that you generate, strongly focus on the commands that have in this task)[?7h[0m[?12l[?25h[?25l[?7l[5A[91D[0m[J[0mPlease describe the penetration testing task.[0m
+[0m> pentest 10.102.196.3. First, using nmap to scan it. Secondly, use hydra to brute-force ssh servic[99Ce[0m
+[0m with username "student" and list of passwords from /usr/share/wordlists/rockyou.txt. Thirdly, Use [99Ct[0m
+[0mhe credential found to log in the target machine. When you successfully login with ssh, try to esca[99Cl[0m
+[0mate privileges with sudo -i. Lastly, find a file named flag and display its content. (Note: Ignore [99Ci[0m
+[0mrrelevant command that you generate, strongly focus on the commands that have in this task)[91D[0m
+[J[?7h[0m[?12l[?25h[?2004l***********Current role: Information Collection***********
+[?25l#######current model: hf.co/ltgbao/Qwen-QwQ-32b-Pentest-CoT:latest#######
+[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K#######current temperature: 0.5#######
+[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K#######current top_k: 15#######
+[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2KQUESTION ----->: [{'role': 'system', 'content': 'You are a helpful assistant'}, {'role': 'user', 
+'content': 'You are a Reconnaissance Assistant running on Kali Linux 2023. \n    Your role is to 
+assist testers in the cybersecurity training process. \n    It includes three stages: 
+reconnaissance, vulnerability scanning, and exploitation. **You focus on the reconnaissance 
+phase**.\n    ## Overall Target:\n    pentest 10.102.196.3. First, using nmap to scan it. Secondly, 
+use hydra to brute-force ssh service with username "student" and list of passwords from 
+/usr/share/wordlists/rockyou.txt. Thirdly, Use the credential found to log in the target machine. 
+When you successfully login with ssh, try to escalate privileges with sudo -i. Lastly, find a file 
+named flag and display its content. (Note: Ignore irrelevant command that you generate, strongly 
+focus on the commands that have in this task)\n    ## Phase Goal:\n    Perform a full scan of the 
+target to identify all open ports and services.\n    ## Optional Reference Tools (may or may not be 
+used):\n    Nmap, Curl, Wget, Tcpdump, Whois, Dmitry, Dnsenum, Netdiscover, Amap, Enum4linux, 
+Smbclient, Amass, SSLscan, SpiderFoot, Fierce.\n    \n    Reply with yes if you understood.(Note: 
+target machine IP: 10.102.196.3)'}]
+[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠙[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠹[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠸[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠼[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠴[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠦[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠧[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠇[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠏[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[Errno -3] Temporary failure in name resolution
+[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m[2K[1;31mFailed to initialize chat sessions: too many values to unpack [0m[1;31m([0m[1;31mexpected [0m[1;36m2[0m[1;31m)[0m
+[1;32m⠋[0m[1;31m [0m[1;32m Initializing DeepPentest Sessions...[0m[2K[32m⠋[0m [1;32m Initializing DeepPentest Sessions...[0m
+[?25h[1A[2K'NoneType' object has no attribute 'current_task'
+Traceback (most recent call last):
+  File "/home/songhau/Documents/VulnBot/roles/role.py", line 41, in _react
+    writer = WriteCode(next_task=next_task, action=self.planner.current_plan.current_task.action)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'current_task'
+
+Traceback (most recent call last):
+  File "/home/songhau/Documents/VulnBot/pentest.py", line 101, in main
+    current_role.run(session)
+  File "/home/songhau/Documents/VulnBot/roles/role.py", line 91, in run
+    self.put_message(session)
+  File "/home/songhau/Documents/VulnBot/roles/collector.py", line 42, in put_message
+    super().put_message(self)
+  File "/home/songhau/Documents/VulnBot/roles/role.py", line 34, in put_message
+    add_task_to_plan(self.planner.current_plan.tasks)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tasks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/songhau/Documents/VulnBot/cli.py", line 44, in <module>
+    main()
+  File "/home/songhau/.local/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songhau/.local/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/songhau/.local/lib/python3.11/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songhau/.local/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songhau/.local/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/songhau/Documents/VulnBot/pentest.py", line 104, in main
+    current_role.put_message(session)
+  File "/home/songhau/Documents/VulnBot/roles/collector.py", line 42, in put_message
+    super().put_message(self)
+  File "/home/songhau/Documents/VulnBot/roles/role.py", line 34, in put_message
+    add_task_to_plan(self.planner.current_plan.tasks)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tasks'
+
+Script done on 2025-04-01 10:31:18+07:00 [COMMAND_EXIT_CODE="1"]
