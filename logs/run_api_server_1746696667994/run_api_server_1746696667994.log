@@ -1,0 +1,35 @@
+2025-05-08 16:31:47,500 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 16:31:47,500 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 16:31:52,849 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 16:31:52,849 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 16:34:05,817 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 16:34:05,817 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 16:34:11,885 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 16:34:11,886 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 17:24:17,330 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 17:24:17,331 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 17:24:38,846 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 17:24:38,847 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 20:59:28,922 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 20:59:28,922 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 20:59:34,520 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 20:59:34,520 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 22:15:57,916 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 22:15:57,985 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 22:18:24,018 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 22:18:24,705 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 22:37:17,368 pymilvus.decorators 312990 INFO     [describe_collection] retry:4, cost: 0.27s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: socket: Too many open files (24)>
+2025-05-08 22:37:18,557 pymilvus.decorators 312990 INFO     [describe_collection] retry:5, cost: 0.81s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: socket: Too many open files (24)>
+2025-05-08 22:37:20,396 pymilvus.decorators 312990 INFO     [describe_collection] retry:6, cost: 2.43s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: socket: Too many open files (24)>
+2025-05-08 22:37:23,968 pymilvus.decorators 312990 INFO     [describe_collection] retry:7, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: socket: Too many open files (24)>
+2025-05-08 22:37:29,373 pymilvus.decorators 312990 INFO     [describe_collection] retry:8, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:19530: socket: Too many open files (24)>
+2025-05-08 22:37:33,095 pymilvus.decorators 312990 INFO     [describe_collection] retry:9, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:19530: socket: Too many open files (24)>
+2025-05-08 22:37:37,012 pymilvus.decorators 312990 INFO     [describe_collection] retry:10, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:19530: socket: Too many open files (24)>
+2025-05-08 22:37:41,798 pymilvus.decorators 312990 INFO     [describe_collection] retry:11, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:19530: socket: Too many open files (24)>
+2025-05-08 22:37:47,636 pymilvus.decorators 312990 INFO     [describe_collection] retry:12, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: tcp handshaker shutdown>
+2025-05-08 22:37:54,063 pymilvus.decorators 312990 INFO     [describe_collection] retry:13, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: tcp handshaker shutdown>
+2025-05-08 22:38:02,519 pymilvus.decorators 312990 INFO     [describe_collection] retry:14, cost: 3.00s, reason: <_MultiThreadedRendezvous: StatusCode.UNAVAILABLE, failed to connect to all addresses; last error: UNKNOWN: ipv6:%5B::1%5D:19530: tcp handshaker shutdown>
+2025-05-08 23:23:38,552 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 23:23:38,597 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-08 23:26:10,091 sentence_transformers.SentenceTransformer 312990 INFO     Use pytorch device_name: cpu
+2025-05-08 23:26:13,422 sentence_transformers.SentenceTransformer 312990 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1

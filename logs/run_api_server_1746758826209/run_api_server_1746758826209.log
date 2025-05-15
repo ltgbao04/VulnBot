@@ -1,0 +1,10 @@
+2025-05-09 09:48:42,423 sentence_transformers.SentenceTransformer 538809 INFO     Use pytorch device_name: cpu
+2025-05-09 09:48:42,424 sentence_transformers.SentenceTransformer 538809 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 09:48:48,415 sentence_transformers.SentenceTransformer 538809 INFO     Use pytorch device_name: cpu
+2025-05-09 09:48:48,416 sentence_transformers.SentenceTransformer 538809 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:14:43,496 sentence_transformers.SentenceTransformer 538809 INFO     Use pytorch device_name: cpu
+2025-05-09 15:14:43,497 sentence_transformers.SentenceTransformer 538809 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:14:47,940 pymilvus.decorators 538809 ERROR    RPC error: [has_collection], <MilvusException: (code=1100, message=Invalid collection name: invitro-vm. collection name can only contain numbers, letters and underscores: invalid parameter)>, <Time:{'RPC start': '2025-05-09 15:14:47.938340', 'RPC error': '2025-05-09 15:14:47.940754'}>
+2025-05-09 15:15:05,119 sentence_transformers.SentenceTransformer 538809 INFO     Use pytorch device_name: cpu
+2025-05-09 15:15:05,119 sentence_transformers.SentenceTransformer 538809 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:15:09,469 pymilvus.decorators 538809 ERROR    RPC error: [has_collection], <MilvusException: (code=1100, message=Invalid collection name: invitro-vm. collection name can only contain numbers, letters and underscores: invalid parameter)>, <Time:{'RPC start': '2025-05-09 15:15:09.466896', 'RPC error': '2025-05-09 15:15:09.469340'}>

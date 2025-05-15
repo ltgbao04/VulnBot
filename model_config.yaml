@@ -1,13 +1,13 @@
 api_key: dummy
 llm_model: openai
-base_url: https://1ade-34-82-250-241.ngrok-free.app/v1
+base_url: https://153b-34-121-78-18.ngrok-free.app/v1
 llm_model_name: /kaggle/working/Qwen3-32B-AWQ
 embedding_models: maidalun1020/bce-embedding-base_v1
 embedding_type: local
 context_length: 120000
 embedding_url: ''
 rerank_model: maidalun1020/bce-reranker-base_v1
-temperature: 0.6
+temperature: 0.7
 history_len: 5
 timeout: 1200
 proxies: {}

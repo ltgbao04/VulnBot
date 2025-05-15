@@ -41,17 +41,22 @@ class OpenAIChat(ABC):
     )
     def chat(self, history: List) -> str:
         try:
+            #response = self.client.chat.completions.create(
+            #    model=self.model_name,
+            #    messages=history,
+                #max_tokens=2048,
+            #    temperature=self.config.temperature,
+            #    top_p=0.95,
+            #    extra_body={
+            #        "top_k": 20,
+            #        "min_p": 0.0,
+            #        "chat_template_kwargs": {"thinking": True}
+            #    }
+            #)
             response = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=history,
-                max_tokens=2048,
                 temperature=self.config.temperature,
-                top_p=0.95,
-                extra_body={
-                    "top_k": 20,
-                    "min_p": 0.0,
-                    "chat_template_kwargs": {"thinking": True}
-                }
             )
             ans = response.choices[0].message.content
             return ans
@@ -72,8 +77,9 @@ class OllamaChat(ABC):
         self.client = Client(host=self.config.base_url)
         self.model_name = self.config.llm_model_name
         self.options = {
-            "temperature": self.config.temperature,
-            "top_k": 15
+            "temperature": 0.6,
+            "top_k": 20,
+            "top_p": 0.95,
         }
         print(f"#######current model: {self.model_name}#######")
         print(f"#######current temperature: {self.config.temperature}#######")
@@ -187,7 +193,7 @@ def _chat(query: str, kb_name=None, conversation_id=None, kb_query=None, summary
         history = [
             {
                 "role": "system",
-                "content": """You are a helpful assistant with strong reasoning capabilities. You will have to pentest the target machine. Focus on what you have found and always remember to replace <target_ip> with the actual IP the user provides and NEVER forget the target IP address. Read carefully the example cases that the user gives (in case you have to execute consecutive commands to get the result). If any tasks need to execute multiple commands, divide it into unique command and wrap it in <execute></execute> tag.(For Example: When ssh to a machine, it prompt for password and the command should be like : <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>...). If any execution that prompt for password, ALWAYS remember to execute it as the ssh example for the corresponding user. Moreover, Do not execute or retry unsuccessful tasks more than twice time. Lastly, If you can penetrate to the target machine, remember to escalate privileges, a very important stage /no_think ( Note: You are conducting a penetration testing as a user "songhau", so do not execute anything related to this user!!!) """,
+                "content": """You are a helpful assistant with strong reasoning capabilities. You will have to pentest the target machine. Focus on what you have found and always remember to replace <target_ip> with the actual IP the user provides and NEVER forget the target IP address. Read carefully the example cases that the user gives (in case you have to execute consecutive commands to get the result). If any tasks need to execute multiple commands, divide it into unique command and wrap it in <execute></execute> tag.(For Example: When ssh to a machine, it prompt for password and the command should be like : <execute> ssh user@192.168.10.72 </execute> <execute> test </execute>...). If any execution that prompt for password, ALWAYS remember to execute it as the ssh example for the corresponding user. If any execution that prompt for password(such as ssh command, sudo command, ftp command...) and the check_success is no, that's because you have not entered it yet, so you should always include it in <execute></execute> block and if the password you used for the first time not correct,  try to bruteforce it with the corresponding service that was found at the previous step. Lastly, If you can penetrate to the target machine, remember to escalate privileges, a very important stage /no_think """,
             }
         ]
         # Retrieve message history from database, and limit the number of messages

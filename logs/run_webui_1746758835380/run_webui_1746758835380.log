@@ -1,0 +1,10 @@
+2025-05-09 09:48:10,983 sentence_transformers.SentenceTransformer 538891 INFO     Use pytorch device_name: cpu
+2025-05-09 09:48:10,984 sentence_transformers.SentenceTransformer 538891 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 09:48:26,903 sentence_transformers.SentenceTransformer 538891 INFO     Use pytorch device_name: cpu
+2025-05-09 09:48:26,904 sentence_transformers.SentenceTransformer 538891 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 09:48:36,504 sentence_transformers.SentenceTransformer 538891 INFO     Use pytorch device_name: cpu
+2025-05-09 09:48:36,505 sentence_transformers.SentenceTransformer 538891 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 09:48:54,333 httpx        538891 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/delete_knowledge_base "HTTP/1.1 200 OK"
+2025-05-09 15:12:48,287 httpx        538891 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-05-09 15:14:47,944 httpx        538891 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/create_knowledge_base "HTTP/1.1 500 Internal Server Error"
+2025-05-09 15:15:09,472 httpx        538891 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/create_knowledge_base "HTTP/1.1 500 Internal Server Error"

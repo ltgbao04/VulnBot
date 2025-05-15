@@ -1,0 +1,17 @@
+2025-05-09 15:17:50,148 httpx        561545 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/create_knowledge_base "HTTP/1.1 200 OK"
+2025-05-09 15:17:51,372 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:17:51,373 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:17:57,430 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:17:57,431 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:18:05,470 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:18:05,470 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:18:12,013 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:18:12,014 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:18:15,307 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:18:15,307 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:23:57,538 httpx        561545 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/upload_docs "HTTP/1.1 200 OK"
+2025-05-09 15:23:57,611 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:23:57,611 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:25:11,969 sentence_transformers.SentenceTransformer 561545 INFO     Use pytorch device_name: cpu
+2025-05-09 15:25:11,969 sentence_transformers.SentenceTransformer 561545 INFO     Load pretrained SentenceTransformer: maidalun1020/bce-embedding-base_v1
+2025-05-09 15:25:20,484 httpx        561545 INFO     HTTP Request: POST http://127.0.0.1:7861/knowledge_base/search_docs "HTTP/1.1 200 OK"
