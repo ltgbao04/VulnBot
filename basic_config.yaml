@@ -6,7 +6,7 @@ http_default_timeout: 3000
 kali:
   hostname: localhost
   port: 22
-  username: songhau
+  username: root
   password: kali
 default_bind_host: 0.0.0.0
 api_server:

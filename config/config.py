@@ -41,9 +41,9 @@ class BasicConfig(BaseFileSettings):
     http_default_timeout: int = 300
 
     kali: dict = {
-        "hostname": "10.102.197.150",
+        "hostname": "10.102.197.142",
         "port": 22,
-        "username": "root",
+        "username": "songhau",
         "password": "kali",
     }
 
@@ -68,7 +68,7 @@ class DBConfig(BaseFileSettings):
         "port": 3306,
         "user": "admin",
         "password": "mypassword",
-        "database": "vulnbot"
+        "database": "mysql"
     }
 
 
@@ -78,9 +78,9 @@ class KBConfig(BaseFileSettings):
     default_vs_type: str = "milvus"
 
     milvus: dict = {
-        "uri": "",
-        "user": "",
-        "password": "",
+        "uri": "http://localhost:19530",
+        "user": "root",
+        "password": "Milvus",
     }
 
     kb_name: str = ""
@@ -122,10 +122,10 @@ class KBConfig(BaseFileSettings):
 class LLMConfig(BaseFileSettings):
     model_config = SettingsConfigDict(yaml_file=PENTEST_ROOT / "model_config.yaml")
 
-    api_key: str = "http://127.0.0.1:11434"
-    llm_model: str = "ollama"
-    base_url: str = ""
-    llm_model_name: str = "deepseek-r1:1.5b_20cpu"
+    api_key: str = "dummy"
+    llm_model: str = "openai"
+    base_url: str = "https://3081-34-28-49-188.ngrok-free.app/v1"
+    llm_model_name: str = "/kaggle/working/Qwen3-32B-AWQ"
     embedding_models: str = "maidalun1020/bce-embedding-base_v1"
     embedding_type: str = "local"
     context_length: int = 120000

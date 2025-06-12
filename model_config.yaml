@@ -1,6 +1,6 @@
 api_key: dummy
 llm_model: openai
-base_url: https://153b-34-121-78-18.ngrok-free.app/v1
+base_url: https://5578-35-223-200-49.ngrok-free.app/v1
 llm_model_name: /kaggle/working/Qwen3-32B-AWQ
 embedding_models: maidalun1020/bce-embedding-base_v1
 embedding_type: local
